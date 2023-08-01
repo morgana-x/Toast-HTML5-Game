@@ -124,7 +124,7 @@ const consequences = {
 			"You put the toast delicately into the toaster, tossing it into the figurative flames of hell.",
 			"It's screams are inaudible against your ignorant humming, as you reach for the butter and turn the dial to max.",
 			"Flames engulf the toast. His family of 11 watching in horror.",
-			"In a hopeless act of revenge he leaps out and onto your expensive but highly flammable carpet",
+			"In a hopeless act of revenge he leaps out and onto your expensive yet highly flammable carpet",
 			"In his dying breath he frees his family out onto the lawn by nudging them off the windowcill.",
 			"I forgot to mention this but you are on the 100th floor of an apartment building",
 			"As you turn around, butter and butter knife in hand, you notice the flickering glow, and the burntout corpse of your victim.",
@@ -134,10 +134,11 @@ const consequences = {
 	no: {
 		heading: "Befriender of the toast.",
 		dialouge: [
-			"You have a sudden change of heart. You realise that the toast is sentient and a really cool guy.",
-			"He thanksyou and begs of you to save all the toast in the world.",
-			"However I think we both know that's impossible.",
-			"You chose the kind and boring option, you have a heart of gold!"	
+			"You pause and stare at the loaf of bread.",
+			"You ponder whether pointless violence is the answer to your insatiable hunger",
+			"It's probably best to let the bread live happily you decide.",
+			"Soon after this thought the bread leaps around you. Praising your godliness",
+			"Congratulations, you are a good person. (I hope)",
 		]
 	},
 	secret: {
