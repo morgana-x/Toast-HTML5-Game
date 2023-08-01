@@ -4,7 +4,7 @@ const c = canvas.getContext('2d')
 
 canvas.width = innerWidth
 canvas.height = innerHeight
-var promptDialougeHeight = canvas.height / 60
+var promptDialougeHeight = canvas.height / 30
 var choiceBoxSize = (canvas.height / 2) - promptDialougeHeight
 var choiceButtonWidth = canvas.width/2
 let bread_sprite = document.getElementById("toast");
@@ -56,7 +56,7 @@ function refreshVariables()
 {
 	 //canvas.width = innerWidth
 	 //canvas.height = innerWidth
-	 promptDialougeHeight = canvas.height / 60
+	 promptDialougeHeight = canvas.height / 30
 	 choiceBoxSize = (canvas.height / 2) - promptDialougeHeight
 	 choiceButtonWidth = canvas.width/2
 	 noBoxRect = {
@@ -85,7 +85,8 @@ function draw(heading, txt) {
 	c.fillStyle = '#000000'
 	c.fillRect(0,  canvas.height - choiceBoxSize - promptDialougeHeight,canvas.width,choiceBoxSize)
 	c.fillStyle = '#ffffff'
-	c.font = "30px Arial";
+	fontSize = Math.round(promptDialougeHeight,0)
+	c.font = fontSize + "px Arial";
 	c.textAlign = "center";
 	c.fillText(heading || "Do you cook bread", canvas.width/2, canvas.height - choiceBoxSize + 8);
 	
@@ -94,7 +95,7 @@ function draw(heading, txt) {
 		c.fillStyle = '#fc7474'
 		c.fillRect(0,  canvas.height - choiceBoxSize + promptDialougeHeight,canvas.width,yesBoxRect.height)
 		c.fillStyle = '#ffffff'
-		c.font = "30px Arial";
+		c.font = fontSize + "px Arial";
 		c.textAlign = "left"
 		c.fillText(txt, 10, canvas.height - yesBoxRect.height + promptDialougeHeight + 30)
 		return;
@@ -108,8 +109,9 @@ function draw(heading, txt) {
 	
 	c.fillStyle = '#ffffff'
 	// draw yes / no
-	c.font = "100px Arial";
-	const y = canvas.height - (( choiceBoxSize - promptDialougeHeight) / 2)
+	fontSize = Math.round(yesBoxRect.width * 0.3,0)
+	c.font = fontSize + "px Arial";
+	const y = canvas.height - (( choiceBoxSize + promptDialougeHeight) / 2) + (fontSize/2)
 	c.fillText('YES', canvas.width/2/2, y)
 	c.fillText('NO', canvas.width /2 + canvas.width /2/2 , y )
 	
