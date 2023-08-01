@@ -88,7 +88,7 @@ function draw(heading, txt) {
 	fontSize = Math.round(promptDialougeHeight,0)
 	c.font = fontSize + "px Arial";
 	c.textAlign = "center";
-	c.fillText(heading || "Do you cook bread", canvas.width/2, canvas.height - choiceBoxSize + 8);
+	c.fillText(heading || "Do you cook bread", canvas.width/2, canvas.height - (choiceBoxSize  - (fontSize/2)))// + (fontSize /2));
 	
 	if (txt != null)
 	{
@@ -97,7 +97,7 @@ function draw(heading, txt) {
 		c.fillStyle = '#ffffff'
 		c.font = fontSize + "px Arial";
 		c.textAlign = "left"
-		c.fillText(txt, 10, canvas.height - yesBoxRect.height + promptDialougeHeight + 30)
+		c.fillText(txt, 10, canvas.height - yesBoxRect.height + promptDialougeHeight + (fontSize/2))
 		return;
 	}
 	// yes box
