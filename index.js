@@ -73,11 +73,6 @@ function refreshVariables()
 	 }
 }
 function draw(heading, txt) {
-	if (canvas.width != innerWidth || canvas.height != innerHeight)
-	{
-		console.log("refreshing")
-		refreshVariables()
-	}
 	c.clearRect(0,0,canvas.width,canvas.height)
 	c.fillStyle = '#fcad74'
 	c.fillRect(0,0,canvas.width,canvas.height)
@@ -184,22 +179,18 @@ window.addEventListener('click', (evt)=> {
 		 }
 		 if (isInside(mousePos, yesBoxRect))
 		 {
-			 console.log("yes")
 			 currentConsequence = consequences.yes
 		 }
 		 else if (isInside(mousePos, noBoxRect))
 		 {
-			 console.log("no")
 			 currentConsequence = consequences.no
 		 }
 		 else if (isInside(mousePos, toastBoxRect))
 		 {
-			 console.log("toast")
 			 currentConsequence = consequences.secret
 		 }
 		 else if (isInside(mousePos, toasterBoxRect))
 		 {
-			 	 console.log("toaster")
 			 currentConsequence = consequences.toaster
 		 }
 	 }
