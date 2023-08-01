@@ -89,7 +89,8 @@ function draw(heading, txt) {
 	c.font = fontSize + "px Arial";
 	c.textAlign = "center";
 	c.fillText(heading || "Do you cook bread", canvas.width/2, canvas.height - (choiceBoxSize  - (fontSize/2)))// + (fontSize /2));
-	
+	c.drawImage(bread_sprite, toastBoxRect.x , toastBoxRect.y, toastBoxRect.width, toastBoxRect.height);
+	c.drawImage(toaster_sprite, toasterBoxRect.x , toasterBoxRect.y, toasterBoxRect.width, toasterBoxRect.height);
 	if (txt != null)
 	{
 		c.fillStyle = '#fc7474'
@@ -114,9 +115,6 @@ function draw(heading, txt) {
 	const y = canvas.height - (( choiceBoxSize + promptDialougeHeight) / 2) + (fontSize/2)
 	c.fillText('YES', canvas.width/2/2, y)
 	c.fillText('NO', canvas.width /2 + canvas.width /2/2 , y )
-	
-	c.drawImage(bread_sprite, toastBoxRect.x , toastBoxRect.y, toastBoxRect.width, toastBoxRect.height);
-	c.drawImage(toaster_sprite, toasterBoxRect.x , toasterBoxRect.y, toasterBoxRect.width, toasterBoxRect.height);
 }
 var textStage = 0
 const consequences = {
