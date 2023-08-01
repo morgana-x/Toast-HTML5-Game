@@ -42,20 +42,20 @@ var noBoxRect = {
 }
 var toastBoxRect = {
 	x: canvas.width /2 - (canvas.width / 5 / 2) ,
-	y: (canvas.height / 2) - choiceBoxSize - promptDialougeHeight - 20+ ( (canvas.width / 5 ) /2  ),
+	y: (canvas.height / 2) - choiceBoxSize - (promptDialougeHeight )  + ( (canvas.width / 5 ) /2 / 2	 ),
 	width: canvas.width / 5,
 	height: canvas.width / 5
 }
 var toasterBoxRect = {
 	x: canvas.width - canvas.width / 4,
-	y: (canvas.height / 2) - choiceBoxSize - promptDialougeHeight - 20 + (canvas.width / 5 / 2),
+	y: (canvas.height / 2) - choiceBoxSize - (promptDialougeHeight )  + (canvas.width / 5 ) / 2 / 2,
 	width: canvas.width / 4,
 	height: canvas.width / 5
 }
 function refreshVariables()
 {
-	 canvas.width = innerWidth
-	 canvas.height = innerWidth
+	 //canvas.width = innerWidth
+	 //canvas.height = innerWidth
 	 promptDialougeHeight = canvas.height / 60
 	 choiceBoxSize = (canvas.height / 2) - promptDialougeHeight
 	 choiceButtonWidth = canvas.width/2
